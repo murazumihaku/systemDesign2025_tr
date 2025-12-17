@@ -1,0 +1,24 @@
+@startuml
+left to right direction
+actor "生徒" as g
+actor "教師" as fc
+package elcampus {
+  usecase "アンケートに回答" as UC1
+  usecase "課題提出" as UC2
+  usecase "課題アップロード" as UC3
+  usecase "お知らせ閲覧" as UC4
+}
+package universalpassport {
+  usecase "成績確認" as UC100
+  usecase "GPA確認" as UC200
+  usecase "履修登録" as UC300
+}
+fc --> UC4
+g --> UC1
+g --> UC2
+g --> UC100
+g --> UC200
+g --> UC300
+fc --> UC300
+fc --> UC3
+@enduml
